@@ -58,8 +58,8 @@ function findTime(current){
     return tmpTime
 }
 function newTime(old){
-    //*8 to make larger range of new dates
-    return parseInt(cyrb128(old.toString()))*8+old
+    //multiplier to make larger range of new dates
+    return parseInt(cyrb128(old.toString()))*7+old
 }
 /*
 //test newTime
