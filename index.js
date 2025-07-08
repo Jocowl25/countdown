@@ -18,7 +18,9 @@ let hour=Math.floor( (timeDif-(day*86400000))/3600000)
 let min=Math.floor(((timeDif-(day*86400000) - (hour* 3600000)))/60000);
 let sec=Math.floor(((timeDif-(day*86400000) - (hour* 3600000)-(min*60000)))/1000);
 if(timeDif<0){
-    timeDif=0;
+    goal=newTime(goal)
+    requestAnimationFrame(main);
+    return;
 }
 if(day<100){
     day="0"+day
